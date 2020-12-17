@@ -52,11 +52,6 @@ def input_offerswitch(chosen_doors, switchto_doors, playcount, mode):
     return switch
 
 
-def input_playagain():
-    play_again = pyinputplus.inputYesNo("\nWould you like to play again?  'Y/N'\n")
-    return play_again
-
-
 def process_playgame(mode):
     winning_doors = []
     chosen_doors = []
@@ -144,12 +139,9 @@ def output_results(mode, didiwin, playcount):
 
 
 def main():
-    play_again ="yes"
     output_welcome()
-    while play_again == "yes":
-        mode = input_mode()
-        process_playgame(mode)
-        play_again = input_playagain()
+    mode = input_mode()
+    process_playgame(mode)
 
 
 main()
